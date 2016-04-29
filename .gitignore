@@ -53,3 +53,5 @@ fastlane/report.xml
 fastlane/screenshots
 
 OpenCV_RealTimeTriangleDetection/opencv2.framework/opencv2
+
+OpenCV_RealTimeTriangleDetection/opencv2.framework/Versions/A/opencv2
