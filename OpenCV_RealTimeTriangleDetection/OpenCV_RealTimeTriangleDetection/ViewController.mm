@@ -23,7 +23,9 @@
     cameraImage = [UIImage imageNamed:@"triangle_hands1.jpg"];
 
     if(cameraImage != nil) {
-        [_cameraView setImage:cameraImage];
+        OpencvContourDetector *contourDetector = [[OpencvContourDetector alloc] initWithImage:cameraImage];
+        [contourDetector findBiggestPolygon:3];
+        _cameraView.image = [contourDetector drawBiggestPolygon:cameraImage :255 :0 :0];
     }
 }
 
