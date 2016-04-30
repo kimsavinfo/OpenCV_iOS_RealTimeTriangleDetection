@@ -16,21 +16,20 @@
 
 @implementation ViewController
 
-@synthesize videoCamera;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.videoCamera = [[CvVideoCamera alloc] initWithParentView:cameraView];
-    self.videoCamera.delegate = self;
-    self.videoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionFront;
-    self.videoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset352x288;
-    self.videoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
-    self.videoCamera.rotateVideo = YES;
-    self.videoCamera.defaultFPS = 30;
-    self.videoCamera.grayscaleMode = NO;
+    self->videoCamera = [[CvVideoCamera alloc] initWithParentView:cameraView];
+    self->videoCamera.delegate = self;
+    self->videoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionFront;
+    self->videoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset352x288;
+    self->videoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
+    self->videoCamera.rotateVideo = YES;
+    self->videoCamera.defaultFPS = 30;
+    self->videoCamera.grayscaleMode = NO;
 
-    [self.videoCamera start];
+    [self->videoCamera start];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,26 +44,29 @@
 {
     Mat image_copy;
     Mat canny_output;
-    int thresh = 100;
+    int lowThreshold = 100;
     std::vector<std::vector<cv::Point> > contours;
     std::vector<Vec4i> hierarchy;
+    int ratio = 2.3;
+    int kernel_size = 3;
     
     /// Convert image to gray and blur it
     cvtColor(image, image_copy, CV_BGRA2BGR);
-    blur(image_copy, image_copy, cv::Size(3,3));
+    blur(image_copy, image_copy, cv::Size(kernel_size,kernel_size));
     
     /// Detect edges using canny
-    Canny( image_copy, canny_output, thresh, thresh*2, 3 );
+    Canny( image_copy, canny_output, lowThreshold, lowThreshold*ratio, kernel_size );
     
     /// Find contours
-    findContours( canny_output, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, cv::Point(0, 0) );
+    findContours( canny_output, contours, hierarchy, CV_RETR_TREE , CV_CHAIN_APPROX_SIMPLE, cv::Point(0, 0) );
     
     /// Draw contours
-    // Mat drawing = Mat::zeros( canny_output.size(), CV_8UC3 );
+    Scalar green = Scalar( 0, 255, 0 );
+    Scalar red = Scalar( 0, 0, 255 );
     for( int i = 0; i< contours.size(); i++ )
     {
-        Scalar color = Scalar( 255, 0, 0 );
-        drawContours( image, contours, i, color, 2, 8, hierarchy, 0, cv::Point() );
+        drawContours( image, contours, i, red, 2, 8, hierarchy, 0, cv::Point() );
+        // drawContours( image, contours, i, green, 2, 8, hierarchy, 0, cv::Point() );
     }
 }
 #endif

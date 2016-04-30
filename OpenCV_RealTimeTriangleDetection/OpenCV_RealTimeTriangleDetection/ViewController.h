@@ -20,6 +20,4 @@ using namespace cv;
     UIImage *cameraImage;
 }
 
-@property (nonatomic, retain) CvVideoCamera* videoCamera;
-
 @end
