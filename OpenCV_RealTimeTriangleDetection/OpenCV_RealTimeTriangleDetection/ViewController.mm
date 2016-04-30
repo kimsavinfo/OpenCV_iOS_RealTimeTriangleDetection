@@ -43,31 +43,40 @@
 - (void)processImage:(Mat&)image;
 {
     Mat image_copy;
-    Mat canny_output;
-    int lowThreshold = 100;
+    Mat threshold_output;
+    int thresh = 100;
     std::vector<std::vector<cv::Point> > contours;
     std::vector<Vec4i> hierarchy;
-    int ratio = 2.3;
     int kernel_size = 3;
+    Scalar green = Scalar( 0, 255, 0 );
+    Scalar red = Scalar( 255, 0, 0);
     
     /// Convert image to gray and blur it
-    cvtColor(image, image_copy, CV_BGRA2BGR);
-    blur(image_copy, image_copy, cv::Size(kernel_size,kernel_size));
+    cvtColor( image, image_copy, CV_BGR2GRAY );
+    blur( image_copy, image_copy, cv::Size(kernel_size,kernel_size) );
     
-    /// Detect edges using canny
-    Canny( image_copy, canny_output, lowThreshold, lowThreshold*ratio, kernel_size );
+    /// Detect edges using Threshold
+    threshold( image_copy, threshold_output, thresh, 255, THRESH_BINARY );
     
     /// Find contours
-    findContours( canny_output, contours, hierarchy, CV_RETR_TREE , CV_CHAIN_APPROX_SIMPLE, cv::Point(0, 0) );
+    findContours( threshold_output, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, cv::Point(0, 0) );
     
-    /// Draw contours
-    Scalar green = Scalar( 0, 255, 0 );
-    Scalar red = Scalar( 0, 0, 255 );
+    /// Find the convex hull object for each contour
+    std::vector<std::vector<cv::Point> >hull( contours.size() );
+    for( int i = 0; i < contours.size(); i++ )
+    {
+        convexHull( Mat(contours[i]), hull[i], false );
+    }
+    
+    /// Draw contours + hull results
+    Mat drawing = Mat::zeros( threshold_output.size(), CV_8UC3 );
     for( int i = 0; i< contours.size(); i++ )
     {
-        drawContours( image, contours, i, red, 2, 8, hierarchy, 0, cv::Point() );
-        // drawContours( image, contours, i, green, 2, 8, hierarchy, 0, cv::Point() );
+        // drawContours( drawing, contours, i, red, 4, 8, std::vector<Vec4i>(), 0, cv::Point() );
+        drawContours( drawing, hull, i, red, 4, 8, std::vector<Vec4i>(), 0, cv::Point() );
     }
+    
+    image = drawing;
 }
 #endif
 
