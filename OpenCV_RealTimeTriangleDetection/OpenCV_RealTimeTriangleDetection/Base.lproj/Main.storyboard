@@ -15,27 +15,30 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fqn-xW-hkq">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fqn-xW-hkq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="1RO-G3-Xj1"/>
-                            <constraint firstItem="fqn-xW-hkq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="IwI-HG-JMk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fqn-xW-hkq" secondAttribute="trailing" constant="-20" id="NKy-vz-FYa"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fqn-xW-hkq" secondAttribute="bottom" id="ehp-Dy-ssj"/>
+                            <constraint firstItem="fqn-xW-hkq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2Ob-E0-V7v"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fqn-xW-hkq" secondAttribute="bottom" id="2UU-kj-Je9"/>
+                            <constraint firstItem="fqn-xW-hkq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="mO6-x8-LJJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fqn-xW-hkq" secondAttribute="trailing" constant="-20" id="sCU-hm-de0"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
-                        <outlet property="cameraView" destination="fqn-xW-hkq" id="w4X-iX-7Hh"/>
+                        <outlet property="cameraView" destination="fqn-xW-hkq" id="7Eo-hf-HVd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="230"/>
         </scene>
     </scenes>
 </document>

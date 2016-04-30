@@ -16,17 +16,21 @@
 
 @implementation ViewController
 
+@synthesize videoCamera;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.videoCamera = [[CvVideoCamera alloc] initWithParentView:cameraView];
+    self.videoCamera.delegate = self;
+    self.videoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionFront;
+    self.videoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset352x288;
+    self.videoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
+    self.videoCamera.rotateVideo = YES;
+    self.videoCamera.defaultFPS = 30;
+    self.videoCamera.grayscaleMode = NO;
 
-    cameraImage = [UIImage imageNamed:@"triangle_hands1.jpg"];
-
-    if(cameraImage != nil) {
-        OpencvContourDetector *contourDetector = [[OpencvContourDetector alloc] initWithImage:cameraImage];
-        [contourDetector findBiggestPolygon:3];
-        _cameraView.image = [contourDetector drawBiggestPolygon:cameraImage :255 :0 :0];
-    }
+    [self.videoCamera start];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,5 +38,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Protocol CvVideoCameraDelegate
+
+#ifdef __cplusplus
+- (void)processImage:(Mat&)image;
+{
+    Mat image_copy;
+    cvtColor(image, image_copy, CV_BGRA2BGR);
+    bitwise_not(image_copy, image_copy);
+    cvtColor(image_copy, image, CV_BGR2BGRA);
+}
+#endif
 
 @end

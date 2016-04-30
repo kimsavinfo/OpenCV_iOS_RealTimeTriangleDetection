@@ -22,7 +22,15 @@
 		B60483101CD390F100ACE937 /* OpencvConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = B604830D1CD390F100ACE937 /* OpencvConverter.mm */; };
 		B60483111CD390F100ACE937 /* OpencvConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = B604830D1CD390F100ACE937 /* OpencvConverter.mm */; };
 		B60483131CD3989E00ACE937 /* TriangleDetectionCleanBackground.mm in Sources */ = {isa = PBXBuildFile; fileRef = B60483121CD3989E00ACE937 /* TriangleDetectionCleanBackground.mm */; };
-		B60483151CD3999E00ACE937 /* TriangleDetectionLigthBackground.mm in Sources */ = {isa = PBXBuildFile; fileRef = B60483141CD3999E00ACE937 /* TriangleDetectionLigthBackground.mm */; };
+		B60A05B01CD51C6A00240B7B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60A05AF1CD51C6A00240B7B /* Accelerate.framework */; };
+		B60A05B21CD51C7600240B7B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60A05B11CD51C7500240B7B /* AVFoundation.framework */; };
+		B60A05B41CD51C8800240B7B /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60A05B31CD51C8800240B7B /* CoreImage.framework */; };
+		B60A05B61CD51C9500240B7B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60A05B51CD51C9500240B7B /* CoreMedia.framework */; };
+		B60A05B81CD51C9E00240B7B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60A05B71CD51C9E00240B7B /* CoreVideo.framework */; };
+		B60A05BA1CD51CA900240B7B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60A05B91CD51CA900240B7B /* QuartzCore.framework */; };
+		B6710A2E1CD5452000B99048 /* TriangleDetectionLigthBackgroundm.mm in Sources */ = {isa = PBXBuildFile; fileRef = B6710A2D1CD5452000B99048 /* TriangleDetectionLigthBackgroundm.mm */; };
+		B6AE24491CD5229F008D03D5 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AE24481CD5229F008D03D5 /* opencv2.framework */; };
+		B6AE244A1CD5229F008D03D5 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AE24481CD5229F008D03D5 /* opencv2.framework */; };
 		B6E9D0031CD34BDF00998C55 /* triangle_hands1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6E9D0011CD34BDF00998C55 /* triangle_hands1.jpg */; };
 		B6E9D0041CD34BDF00998C55 /* triangle_hands1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6E9D0011CD34BDF00998C55 /* triangle_hands1.jpg */; };
 		B6E9D0051CD34BDF00998C55 /* triangle_hands2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6E9D0021CD34BDF00998C55 /* triangle_hands2.jpg */; };
@@ -31,8 +39,6 @@
 		B6E9D00A1CD3527500998C55 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E9D0091CD3527500998C55 /* CoreGraphics.framework */; };
 		B6E9D00C1CD3527E00998C55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E9D00B1CD3527E00998C55 /* Foundation.framework */; };
 		B6E9D00E1CD3529D00998C55 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E9D00D1CD3529D00998C55 /* UIKit.framework */; };
-		B6E9D0101CD352D800998C55 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E9D00F1CD352D800998C55 /* opencv2.framework */; };
-		B6E9D0111CD352D800998C55 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E9D00F1CD352D800998C55 /* opencv2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,14 +69,20 @@
 		B604830C1CD390F100ACE937 /* OpencvConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpencvConverter.h; sourceTree = "<group>"; };
 		B604830D1CD390F100ACE937 /* OpencvConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpencvConverter.mm; sourceTree = "<group>"; };
 		B60483121CD3989E00ACE937 /* TriangleDetectionCleanBackground.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TriangleDetectionCleanBackground.mm; sourceTree = "<group>"; };
-		B60483141CD3999E00ACE937 /* TriangleDetectionLigthBackground.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TriangleDetectionLigthBackground.mm; sourceTree = "<group>"; };
+		B60A05AF1CD51C6A00240B7B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		B60A05B11CD51C7500240B7B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B60A05B31CD51C8800240B7B /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		B60A05B51CD51C9500240B7B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		B60A05B71CD51C9E00240B7B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		B60A05B91CD51CA900240B7B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B6710A2D1CD5452000B99048 /* TriangleDetectionLigthBackgroundm.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TriangleDetectionLigthBackgroundm.mm; sourceTree = "<group>"; };
+		B6AE24481CD5229F008D03D5 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		B6E9D0011CD34BDF00998C55 /* triangle_hands1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = triangle_hands1.jpg; sourceTree = "<group>"; };
 		B6E9D0021CD34BDF00998C55 /* triangle_hands2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = triangle_hands2.jpg; sourceTree = "<group>"; };
 		B6E9D0071CD3526C00998C55 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		B6E9D0091CD3527500998C55 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B6E9D00B1CD3527E00998C55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B6E9D00D1CD3529D00998C55 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		B6E9D00F1CD352D800998C55 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +90,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B60A05BA1CD51CA900240B7B /* QuartzCore.framework in Frameworks */,
+				B60A05B81CD51C9E00240B7B /* CoreVideo.framework in Frameworks */,
+				B60A05B61CD51C9500240B7B /* CoreMedia.framework in Frameworks */,
+				B60A05B41CD51C8800240B7B /* CoreImage.framework in Frameworks */,
+				B6E9D00A1CD3527500998C55 /* CoreGraphics.framework in Frameworks */,
+				B60A05B21CD51C7600240B7B /* AVFoundation.framework in Frameworks */,
+				B60A05B01CD51C6A00240B7B /* Accelerate.framework in Frameworks */,
 				B6E9D00E1CD3529D00998C55 /* UIKit.framework in Frameworks */,
 				B6E9D00C1CD3527E00998C55 /* Foundation.framework in Frameworks */,
-				B6E9D00A1CD3527500998C55 /* CoreGraphics.framework in Frameworks */,
-				B6E9D0101CD352D800998C55 /* opencv2.framework in Frameworks */,
 				B6E9D0081CD3526C00998C55 /* AssetsLibrary.framework in Frameworks */,
+				B6AE24491CD5229F008D03D5 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,8 +111,8 @@
 				B60483081CD3596400ACE937 /* UIKit.framework in Frameworks */,
 				B60483071CD3595D00ACE937 /* Foundation.framework in Frameworks */,
 				B60483061CD3595200ACE937 /* CoreGraphics.framework in Frameworks */,
+				B6AE244A1CD5229F008D03D5 /* opencv2.framework in Frameworks */,
 				B60483051CD3594A00ACE937 /* AssetsLibrary.framework in Frameworks */,
-				B6E9D0111CD352D800998C55 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,15 +148,21 @@
 		9546DEBFC254A2EA2739D221 = {
 			isa = PBXGroup;
 			children = (
-				B60483091CD390F100ACE937 /* Lib */,
-				B6E9D00F1CD352D800998C55 /* opencv2.framework */,
-				B6E9D00D1CD3529D00998C55 /* UIKit.framework */,
-				B6E9D00B1CD3527E00998C55 /* Foundation.framework */,
-				B6E9D0091CD3527500998C55 /* CoreGraphics.framework */,
+				B6AE24481CD5229F008D03D5 /* opencv2.framework */,
+				B60A05AF1CD51C6A00240B7B /* Accelerate.framework */,
 				B6E9D0071CD3526C00998C55 /* AssetsLibrary.framework */,
-				9546DECF732A6C370185A279 /* Products */,
+				B60A05B11CD51C7500240B7B /* AVFoundation.framework */,
+				B6E9D0091CD3527500998C55 /* CoreGraphics.framework */,
+				B60A05B31CD51C8800240B7B /* CoreImage.framework */,
+				B60A05B51CD51C9500240B7B /* CoreMedia.framework */,
+				B60A05B71CD51C9E00240B7B /* CoreVideo.framework */,
+				B6E9D00B1CD3527E00998C55 /* Foundation.framework */,
+				B60A05B91CD51CA900240B7B /* QuartzCore.framework */,
+				B6E9D00D1CD3529D00998C55 /* UIKit.framework */,
+				B60483091CD390F100ACE937 /* Lib */,
 				9546D36EA494C0B23EA6629F /* OpenCV_RealTimeTriangleDetection */,
 				9546DF227DFBC4D318803C31 /* OpenCV_RealTimeTriangleDetectionTests */,
+				9546DECF732A6C370185A279 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,7 +180,7 @@
 			children = (
 				9546DBE3A10EDF7AC4D1F989 /* Info.plist */,
 				B60483121CD3989E00ACE937 /* TriangleDetectionCleanBackground.mm */,
-				B60483141CD3999E00ACE937 /* TriangleDetectionLigthBackground.mm */,
+				B6710A2D1CD5452000B99048 /* TriangleDetectionLigthBackgroundm.mm */,
 			);
 			path = OpenCV_RealTimeTriangleDetectionTests;
 			sourceTree = "<group>";
@@ -268,7 +292,7 @@
 			files = (
 				B60483131CD3989E00ACE937 /* TriangleDetectionCleanBackground.mm in Sources */,
 				B60483111CD390F100ACE937 /* OpencvConverter.mm in Sources */,
-				B60483151CD3999E00ACE937 /* TriangleDetectionLigthBackground.mm in Sources */,
+				B6710A2E1CD5452000B99048 /* TriangleDetectionLigthBackgroundm.mm in Sources */,
 				B604830F1CD390F100ACE937 /* OpencvContourDetector.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

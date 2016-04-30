@@ -8,14 +8,18 @@
 
 
 #import <UIKit/UIKit.h>
-#import "../Lib/OpencvContourDetector.h"
+#import <Foundation/Foundation.h>
+#import <opencv2/opencv.hpp>
+#import <opencv2/videoio/cap_ios.h>
 
-@interface ViewController : UIViewController {
+using namespace cv;
+
+@interface ViewController : UIViewController<CvVideoCameraDelegate> {
+    IBOutlet UIImageView *cameraView;
+    CvVideoCamera* videoCamera;
     UIImage *cameraImage;
 }
 
-@property (weak, nonatomic) IBOutlet UIImageView *cameraView;
-
-
+@property (nonatomic, retain) CvVideoCamera* videoCamera;
 
 @end
