@@ -44,19 +44,21 @@
 {
     Mat image_copy;
     Mat threshold_output;
-    int thresh = 100;
+    int thresh = 155;
+    int maxval = 255;
     std::vector<std::vector<cv::Point> > contours;
     std::vector<Vec4i> hierarchy;
     int kernel_size = 3;
     Scalar green = Scalar( 0, 255, 0 );
     Scalar red = Scalar( 255, 0, 0);
+    Scalar blue = Scalar( 0, 0, 255);
     
     /// Convert image to gray and blur it
     cvtColor( image, image_copy, CV_BGR2GRAY );
     blur( image_copy, image_copy, cv::Size(kernel_size,kernel_size) );
     
     /// Detect edges using Threshold
-    threshold( image_copy, threshold_output, thresh, 255, THRESH_BINARY );
+    threshold( image_copy, threshold_output, thresh, maxval, THRESH_BINARY_INV );
     
     // ===== PHASE : 1
     
@@ -74,8 +76,9 @@
     Mat drawing = Mat::zeros( threshold_output.size(), CV_8UC3 );
     for( int i = 0; i< contours.size(); i++ )
     {
-        // drawContours( drawing, contours, i, red, 4, 8, std::vector<Vec4i>(), 0, cv::Point() );
+        drawContours( drawing, contours, i, blue, 4, 8, std::vector<Vec4i>(), 0, cv::Point() );
         drawContours( drawing, hull, i, red, 4, 8, std::vector<Vec4i>(), 0, cv::Point() );
+        // drawContours( image, hull, i, red, 4, 8, std::vector<Vec4i>(), 0, cv::Point() );
     }
     
     // ===== PHASE : 2 - is there a triangle ?
@@ -87,20 +90,22 @@
     cv::findContours(bw.clone(), contours2, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
     
     std::vector<cv::Point> approx;
+    float EPS_COEFFICIENT = 0.03;
     for (int i = 0; i < contours2.size(); i++)
     {
         // Approximate contour with accuracy proportional
         // to the contour perimeter
-        cv::approxPolyDP(cv::Mat(contours2[i]), approx, cv::arcLength(cv::Mat(contours2[i]), true)*0.02, true);
+        cv::approxPolyDP(cv::Mat(contours2[i]), approx, cv::arcLength(cv::Mat(contours2[i]), true)*EPS_COEFFICIENT, true);
         
-        // Skip small or non-convex objects
-        if (std::fabs(cv::contourArea(contours2[i])) < 2500 || !cv::isContourConvex(approx))
-            continue;
-        
-        if (approx.size() == 3)
+        // Skip small or too big or non-convex objects
+        if ( std::fabs(cv::contourArea(contours2[i])) > 2500 && cv::isContourConvex(approx))
         {
-            printf("TRI : %f \n", std::fabs(cv::contourArea(contours2[i])));
-            drawContours( drawing, contours2, i, green, 4, 8, std::vector<Vec4i>(), 0, cv::Point() );
+            if (approx.size() == 3)
+            {
+                printf("TRI : %f \n", std::fabs(cv::contourArea(contours2[i])));
+                drawContours( drawing, contours2, i, green, 4, 8, std::vector<Vec4i>(), 0, cv::Point() );
+                // drawContours( image, contours2, i, blue, 4, 8, std::vector<Vec4i>(), 0, cv::Point() );
+            }
         }
     }
     
