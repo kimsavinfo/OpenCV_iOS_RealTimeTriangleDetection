@@ -89,6 +89,20 @@
     std::vector<std::vector<cv::Point> > contours2;
     cv::findContours(bw.clone(), contours2, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
     
+    /// Get the moments
+    std::vector<Moments> mu(contours2.size() );
+    for( int i = 0; i < contours2.size(); i++ )
+    {
+        mu[i] = moments( contours2[i], false );
+    }
+    
+    ///  Get the mass centers:
+    std::vector<Point2f> mc( contours2.size() );
+    for( int i = 0; i < contours2.size(); i++ )
+    {
+        mc[i] = Point2f( mu[i].m10/mu[i].m00 , mu[i].m01/mu[i].m00 );
+    }
+    
     std::vector<cv::Point> approx;
     float EPS_COEFFICIENT = 0.03;
     for (int i = 0; i < contours2.size(); i++)
@@ -98,13 +112,18 @@
         cv::approxPolyDP(cv::Mat(contours2[i]), approx, cv::arcLength(cv::Mat(contours2[i]), true)*EPS_COEFFICIENT, true);
         
         // Skip small or too big or non-convex objects
-        if ( std::fabs(cv::contourArea(contours2[i])) > 2500 && cv::isContourConvex(approx))
+        // Skip the triangle not in the center
+        if ( std::fabs(cv::contourArea(contours2[i])) > 2000 && cv::isContourConvex(approx)
+            && mc[i].y > 80 && mc[i].y < 250)
         {
             if (approx.size() == 3)
             {
                 printf("TRI : %f \n", std::fabs(cv::contourArea(contours2[i])));
                 drawContours( drawing, contours2, i, green, 4, 8, std::vector<Vec4i>(), 0, cv::Point() );
                 // drawContours( image, contours2, i, blue, 4, 8, std::vector<Vec4i>(), 0, cv::Point() );
+                
+                printf("Center : (%f;%f) \n" ,mc[i].x, mc[i].y );
+                circle( drawing, mc[i], 4, green, 3, 8, 0 );
             }
         }
     }
