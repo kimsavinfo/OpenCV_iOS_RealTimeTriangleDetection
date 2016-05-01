@@ -58,6 +58,8 @@
     /// Detect edges using Threshold
     threshold( image_copy, threshold_output, thresh, 255, THRESH_BINARY );
     
+    // ===== PHASE : 1
+    
     /// Find contours
     findContours( threshold_output, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, cv::Point(0, 0) );
     
@@ -68,12 +70,38 @@
         convexHull( Mat(contours[i]), hull[i], false );
     }
     
-    /// Draw contours + hull results
+    /// Draw hull contours
     Mat drawing = Mat::zeros( threshold_output.size(), CV_8UC3 );
     for( int i = 0; i< contours.size(); i++ )
     {
         // drawContours( drawing, contours, i, red, 4, 8, std::vector<Vec4i>(), 0, cv::Point() );
         drawContours( drawing, hull, i, red, 4, 8, std::vector<Vec4i>(), 0, cv::Point() );
+    }
+    
+    // ===== PHASE : 2 - is there a triangle ?
+    // Use Canny instead of threshold to catch squares with gradient shading
+    cv::Mat bw;
+    cv::Canny(drawing, bw, 0, 50, 5);
+    // Find contours
+    std::vector<std::vector<cv::Point> > contours2;
+    cv::findContours(bw.clone(), contours2, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
+    
+    std::vector<cv::Point> approx;
+    for (int i = 0; i < contours2.size(); i++)
+    {
+        // Approximate contour with accuracy proportional
+        // to the contour perimeter
+        cv::approxPolyDP(cv::Mat(contours2[i]), approx, cv::arcLength(cv::Mat(contours2[i]), true)*0.02, true);
+        
+        // Skip small or non-convex objects
+        if (std::fabs(cv::contourArea(contours2[i])) < 2500 || !cv::isContourConvex(approx))
+            continue;
+        
+        if (approx.size() == 3)
+        {
+            printf("TRI : %f \n", std::fabs(cv::contourArea(contours2[i])));
+            drawContours( drawing, contours2, i, green, 4, 8, std::vector<Vec4i>(), 0, cv::Point() );
+        }
     }
     
     image = drawing;
