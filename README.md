@@ -1,7 +1,7 @@
 # OpenCV_iOS_RealTimeTriangleDetection
 With openCV iOS : find in real time a triangle shape drawn by hands
 
-![test01](screenshots/test01.png)
+![test01](screenshots/test01.jpg)
 
 ## How do I import openCV iOS ?
 
