@@ -4,7 +4,7 @@ With openCV iOS : find in real time a triangle shape drawn by hands
 ![test01](screenshots/test01.jpg)
 
 ## What are the key words ?
-For this project, I had to use :
+For this project, I had to :
 * put the image in grayscale
 * blur it
 * detect the edges and draw the contours and hull 
