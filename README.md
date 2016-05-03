@@ -3,6 +3,17 @@ With openCV iOS : find in real time a triangle shape drawn by hands
 
 ![test01](screenshots/test01.jpg)
 
+## What are the key words ?
+For this project, I had to use :
+* put the image in grayscale
+* blur it
+* detect the edges and draw the contours and hull 
+* create a new preview with a black background, the contours in blue and the hull in red
+* use the preview and apply the Canny algorithm to detect geometric shapes
+* check if the shape is a triangle AND if its center is at the center of the iPhone
+* draw the biggest triangle in green
+
+
 ## How do I import openCV iOS ?
 
 ### Link Libraries
