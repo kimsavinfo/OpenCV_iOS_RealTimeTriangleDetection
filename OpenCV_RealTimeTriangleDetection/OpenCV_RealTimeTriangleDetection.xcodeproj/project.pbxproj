@@ -9,28 +9,26 @@
 /* Begin PBXBuildFile section */
 		9546D3264083266A1B13BCED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9546DE79550B8B1C748343CB /* main.m */; };
 		9546D51A95DE8D2C94511E6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9546D24E333B97898E00A5B5 /* AppDelegate.m */; };
+		9546D54F4388B07530EABC09 /* ImageProcesser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9546D6DB01917F56C7B170F0 /* ImageProcesser.mm */; };
 		9546DA6A90ECD12E6E490F5E /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9546D6FAFD4395DD6BA6444D /* ViewController.mm */; };
 		9546DAE2C98E9B150DCA3334 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9546DDAF1AEBFB79E4F341DE /* Main.storyboard */; };
 		9546DC04336703F4B05225D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9546D04CE5BFF685E7F12E64 /* Assets.xcassets */; };
 		9546DD05BEE06598C1E89C7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9546DAEC17500D141C220B32 /* LaunchScreen.storyboard */; };
+		9546DECAB3D8791EE9FD1D1B /* ImageProcesser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9546D6DB01917F56C7B170F0 /* ImageProcesser.mm */; };
 		B60483051CD3594A00ACE937 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E9D0071CD3526C00998C55 /* AssetsLibrary.framework */; };
 		B60483061CD3595200ACE937 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E9D0091CD3527500998C55 /* CoreGraphics.framework */; };
 		B60483071CD3595D00ACE937 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E9D00B1CD3527E00998C55 /* Foundation.framework */; };
 		B60483081CD3596400ACE937 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E9D00D1CD3529D00998C55 /* UIKit.framework */; };
-		B604830E1CD390F100ACE937 /* OpencvContourDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = B604830B1CD390F100ACE937 /* OpencvContourDetector.mm */; };
-		B604830F1CD390F100ACE937 /* OpencvContourDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = B604830B1CD390F100ACE937 /* OpencvContourDetector.mm */; };
-		B60483101CD390F100ACE937 /* OpencvConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = B604830D1CD390F100ACE937 /* OpencvConverter.mm */; };
-		B60483111CD390F100ACE937 /* OpencvConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = B604830D1CD390F100ACE937 /* OpencvConverter.mm */; };
-		B60483131CD3989E00ACE937 /* TriangleDetectionCleanBackground.mm in Sources */ = {isa = PBXBuildFile; fileRef = B60483121CD3989E00ACE937 /* TriangleDetectionCleanBackground.mm */; };
 		B60A05B01CD51C6A00240B7B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60A05AF1CD51C6A00240B7B /* Accelerate.framework */; };
 		B60A05B21CD51C7600240B7B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60A05B11CD51C7500240B7B /* AVFoundation.framework */; };
 		B60A05B41CD51C8800240B7B /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60A05B31CD51C8800240B7B /* CoreImage.framework */; };
 		B60A05B61CD51C9500240B7B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60A05B51CD51C9500240B7B /* CoreMedia.framework */; };
 		B60A05B81CD51C9E00240B7B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60A05B71CD51C9E00240B7B /* CoreVideo.framework */; };
 		B60A05BA1CD51CA900240B7B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60A05B91CD51CA900240B7B /* QuartzCore.framework */; };
-		B6710A2E1CD5452000B99048 /* TriangleDetectionLigthBackgroundm.mm in Sources */ = {isa = PBXBuildFile; fileRef = B6710A2D1CD5452000B99048 /* TriangleDetectionLigthBackgroundm.mm */; };
 		B6AE24491CD5229F008D03D5 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AE24481CD5229F008D03D5 /* opencv2.framework */; };
 		B6AE244A1CD5229F008D03D5 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AE24481CD5229F008D03D5 /* opencv2.framework */; };
+		B6E210281CD7FCF100AACE08 /* ShapeDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = B6E210271CD7FCF100AACE08 /* ShapeDetector.mm */; };
+		B6E210291CD7FCF100AACE08 /* ShapeDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = B6E210271CD7FCF100AACE08 /* ShapeDetector.mm */; };
 		B6E9D0031CD34BDF00998C55 /* triangle_hands1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6E9D0011CD34BDF00998C55 /* triangle_hands1.jpg */; };
 		B6E9D0041CD34BDF00998C55 /* triangle_hands1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6E9D0011CD34BDF00998C55 /* triangle_hands1.jpg */; };
 		B6E9D0051CD34BDF00998C55 /* triangle_hands2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6E9D0021CD34BDF00998C55 /* triangle_hands2.jpg */; };
@@ -56,27 +54,24 @@
 		9546D2241E0A3941A005AC23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9546D24E333B97898E00A5B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9546D4FC4C357CF7FDD551C6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9546D65C5DDFA045147AF614 /* ImageProcesser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcesser.h; sourceTree = "<group>"; };
+		9546D6DB01917F56C7B170F0 /* ImageProcesser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageProcesser.mm; sourceTree = "<group>"; };
 		9546D6FAFD4395DD6BA6444D /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		9546D87A0B9C44EF19EB6E51 /* OpenCV_RealTimeTriangleDetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCV_RealTimeTriangleDetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9546D9850F0BA294F94695FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		9546DB4B5E8B10AE0537CC1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9546DBE3A10EDF7AC4D1F989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		9546DC88B5C49C8608440B0F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		9546DD86DE9F5A9F82582664 /* OpenCV_RealTimeTriangleDetectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenCV_RealTimeTriangleDetectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9546DE79550B8B1C748343CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B604830A1CD390F100ACE937 /* OpencvContourDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpencvContourDetector.h; sourceTree = "<group>"; };
-		B604830B1CD390F100ACE937 /* OpencvContourDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpencvContourDetector.mm; sourceTree = "<group>"; };
-		B604830C1CD390F100ACE937 /* OpencvConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpencvConverter.h; sourceTree = "<group>"; };
-		B604830D1CD390F100ACE937 /* OpencvConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpencvConverter.mm; sourceTree = "<group>"; };
-		B60483121CD3989E00ACE937 /* TriangleDetectionCleanBackground.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TriangleDetectionCleanBackground.mm; sourceTree = "<group>"; };
 		B60A05AF1CD51C6A00240B7B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		B60A05B11CD51C7500240B7B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B60A05B31CD51C8800240B7B /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		B60A05B51CD51C9500240B7B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		B60A05B71CD51C9E00240B7B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		B60A05B91CD51CA900240B7B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		B6710A2D1CD5452000B99048 /* TriangleDetectionLigthBackgroundm.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TriangleDetectionLigthBackgroundm.mm; sourceTree = "<group>"; };
 		B6AE24481CD5229F008D03D5 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		B6E210271CD7FCF100AACE08 /* ShapeDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ShapeDetector.mm; sourceTree = "<group>"; };
+		B6E2102A1CD7FD0600AACE08 /* ShapeDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeDetector.h; sourceTree = "<group>"; };
 		B6E9D0011CD34BDF00998C55 /* triangle_hands1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = triangle_hands1.jpg; sourceTree = "<group>"; };
 		B6E9D0021CD34BDF00998C55 /* triangle_hands2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = triangle_hands2.jpg; sourceTree = "<group>"; };
 		B6E9D0071CD3526C00998C55 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -148,7 +143,6 @@
 		9546DEBFC254A2EA2739D221 = {
 			isa = PBXGroup;
 			children = (
-				B6AE24481CD5229F008D03D5 /* opencv2.framework */,
 				B60A05AF1CD51C6A00240B7B /* Accelerate.framework */,
 				B6E9D0071CD3526C00998C55 /* AssetsLibrary.framework */,
 				B60A05B11CD51C7500240B7B /* AVFoundation.framework */,
@@ -157,6 +151,7 @@
 				B60A05B51CD51C9500240B7B /* CoreMedia.framework */,
 				B60A05B71CD51C9E00240B7B /* CoreVideo.framework */,
 				B6E9D00B1CD3527E00998C55 /* Foundation.framework */,
+				B6AE24481CD5229F008D03D5 /* opencv2.framework */,
 				B60A05B91CD51CA900240B7B /* QuartzCore.framework */,
 				B6E9D00D1CD3529D00998C55 /* UIKit.framework */,
 				B60483091CD390F100ACE937 /* Lib */,
@@ -170,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				9546D87A0B9C44EF19EB6E51 /* OpenCV_RealTimeTriangleDetection.app */,
-				9546DD86DE9F5A9F82582664 /* OpenCV_RealTimeTriangleDetectionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,8 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				9546DBE3A10EDF7AC4D1F989 /* Info.plist */,
-				B60483121CD3989E00ACE937 /* TriangleDetectionCleanBackground.mm */,
-				B6710A2D1CD5452000B99048 /* TriangleDetectionLigthBackgroundm.mm */,
 			);
 			path = OpenCV_RealTimeTriangleDetectionTests;
 			sourceTree = "<group>";
@@ -188,10 +180,10 @@
 		B60483091CD390F100ACE937 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				B604830A1CD390F100ACE937 /* OpencvContourDetector.h */,
-				B604830B1CD390F100ACE937 /* OpencvContourDetector.mm */,
-				B604830C1CD390F100ACE937 /* OpencvConverter.h */,
-				B604830D1CD390F100ACE937 /* OpencvConverter.mm */,
+				B6E210271CD7FCF100AACE08 /* ShapeDetector.mm */,
+				B6E2102A1CD7FD0600AACE08 /* ShapeDetector.h */,
+				9546D6DB01917F56C7B170F0 /* ImageProcesser.mm */,
+				9546D65C5DDFA045147AF614 /* ImageProcesser.h */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -214,7 +206,6 @@
 			);
 			name = OpenCV_RealTimeTriangleDetectionTests;
 			productName = OpenCV_RealTimeTriangleDetectionTests;
-			productReference = 9546DD86DE9F5A9F82582664 /* OpenCV_RealTimeTriangleDetectionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		9546DEC16FA79452C7E618BA /* OpenCV_RealTimeTriangleDetection */ = {
@@ -290,10 +281,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B60483131CD3989E00ACE937 /* TriangleDetectionCleanBackground.mm in Sources */,
-				B60483111CD390F100ACE937 /* OpencvConverter.mm in Sources */,
-				B6710A2E1CD5452000B99048 /* TriangleDetectionLigthBackgroundm.mm in Sources */,
-				B604830F1CD390F100ACE937 /* OpencvContourDetector.mm in Sources */,
+				B6E210291CD7FCF100AACE08 /* ShapeDetector.mm in Sources */,
+				9546D54F4388B07530EABC09 /* ImageProcesser.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,11 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B60483101CD390F100ACE937 /* OpencvConverter.mm in Sources */,
+				B6E210281CD7FCF100AACE08 /* ShapeDetector.mm in Sources */,
 				9546D3264083266A1B13BCED /* main.m in Sources */,
 				9546D51A95DE8D2C94511E6E /* AppDelegate.m in Sources */,
 				9546DA6A90ECD12E6E490F5E /* ViewController.mm in Sources */,
-				B604830E1CD390F100ACE937 /* OpencvContourDetector.mm in Sources */,
+				9546DECAB3D8791EE9FD1D1B /* ImageProcesser.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,8 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import <opencv2/opencv.hpp>
+
+#import "ShapeDetector.h"
 #import <opencv2/videoio/cap_ios.h>
 
 using namespace cv;

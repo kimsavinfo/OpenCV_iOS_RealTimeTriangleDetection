@@ -5,18 +5,18 @@
       <sourceFolder url="file://$MODULE_DIR$/OpenCV_RealTimeTriangleDetection/Assets.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OpenCV_RealTimeTriangleDetection/ViewController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OpenCV_RealTimeTriangleDetection/AppDelegate.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/OpenCV_RealTimeTriangleDetection/ViewController.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/OpenCV_RealTimeTriangleDetection/main.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/OpenCV_RealTimeTriangleDetection/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OpenCV_RealTimeTriangleDetection/triangle_hands1.jpg" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/OpenCV_RealTimeTriangleDetection/ViewController.mm" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/OpenCV_RealTimeTriangleDetection/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/OpenCV_RealTimeTriangleDetection/main.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OpenCV_RealTimeTriangleDetection/triangle_hands2.jpg" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OpenCV_RealTimeTriangleDetection/AppDelegate.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OpenCV_RealTimeTriangleDetection/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OpenCV_RealTimeTriangleDetection/Base.lproj/Main.storyboard" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Lib/OpencvContourDetector.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Lib/OpencvConverter.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Lib/OpencvContourDetector.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Lib/OpencvConverter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lib/ShapeDetector.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lib/ShapeDetector.mm" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lib/ImageProcesser.mm" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lib/ImageProcesser.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OpenCV_RealTimeTriangleDetectionTests/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OpenCV_RealTimeTriangleDetectionTests/TriangleDetectionCleanBackground.mm" isTestSource="false" />
     </content>
