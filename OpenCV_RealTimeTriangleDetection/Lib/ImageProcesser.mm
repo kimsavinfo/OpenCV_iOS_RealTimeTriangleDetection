@@ -8,11 +8,11 @@
 
 @implementation ImageProcesser {}
 
-+(void)BGR2GRAY:(cv::Mat&)imgSrc :(cv::Mat&)imgOutput {
++(void)BGR2GRAYImage:(cv::Mat&)imgSrc outputImg:(cv::Mat&)imgOutput {
     cv::cvtColor( imgSrc, imgOutput, CV_BGR2GRAY );
 }
 
-+(void)blur:(cv::Mat&)imgSrc :(cv::Mat&)imgOutput {
++(void)blurImage:(cv::Mat&)imgSrc outputImg:(cv::Mat&)imgOutput {
     blur( imgSrc, imgOutput, cv::Size(IMG_PRCSS_KERNEL_SIZE, IMG_PRCSS_KERNEL_SIZE) );
 }
 

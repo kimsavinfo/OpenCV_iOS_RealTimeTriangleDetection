@@ -38,13 +38,13 @@ static const cv::Scalar yellow = cv::Scalar(255, 255,0);
 
 -(void)cleanUp;
 
--(void)findBiggestShape:(cv::Mat&)imgSrc :(int)nbVertices :(int)areaMin;
--(void)findThresholdContours:(cv::Mat&)imgSrc;
--(void)findCannyContours:(cv::Mat&)imgSrc;
+-(void)findBiggestShapeFromImage:(cv::Mat&)imgSrc verticesNb:(int)nbVertices minArea:(int)areaMin;
+-(void)findThresholdContoursFromImage:(cv::Mat&)imgSrc;
+-(void)findCannyContoursFromImage:(cv::Mat&)imgSrc;
 
--(void)drawBiggestShape:(cv::Mat&)imgSrc;
--(void)drawThresholdContours:(cv::Mat&)imgSrc;
--(void)drawCannyContours:(cv::Mat&)imgSrc;
+-(void)drawBiggestShapeOnImage:(cv::Mat&)imgSrc;
+-(void)drawThresholdContoursOnImage:(cv::Mat&)imgSrc;
+-(void)drawCannyContoursOnImage:(cv::Mat&)imgSrc;
 
 -(bool)isShapeFound;
 

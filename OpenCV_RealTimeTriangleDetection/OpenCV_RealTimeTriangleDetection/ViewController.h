@@ -16,9 +16,10 @@
 using namespace cv;
 
 @interface ViewController : UIViewController<CvVideoCameraDelegate> {
-    IBOutlet UIImageView *cameraView;
-    CvVideoCamera* videoCamera;
-    UIImage *cameraImage;
 }
+
+@property IBOutlet UIImageView *cameraView;
+@property CvVideoCamera* videoCamera;
+@property UIImage *cameraImage;
 
 @end

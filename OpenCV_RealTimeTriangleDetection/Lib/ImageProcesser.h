@@ -13,8 +13,8 @@ static const int IMG_PRCSS_KERNEL_SIZE = 3;
 
 }
 
-+ (void)BGR2GRAY:(cv::Mat&)imgSrc :(cv::Mat&)imgOutput;
++ (void)BGR2GRAYImage:(cv::Mat&)imgSrc outputImg:(cv::Mat&)imgOutput;
 
-+ (void)blur:(cv::Mat&)imgSrc :(cv::Mat&)imgOutput;
++ (void)blurImage:(cv::Mat&)imgSrc outputImg:(cv::Mat&)imgOutput;
 
 @end

@@ -18,16 +18,16 @@
     _iBiggestShape = -1;
 }
 
--(void)findBiggestShape:(cv::Mat&)imgSrc :(int)nbVertices :(int)areaMin{
+-(void)findBiggestShapeFromImage:(cv::Mat&)imgSrc verticesNb:(int)nbVertices minArea:(int)areaMin{
     std::vector<cv::Point> approx;
     float biggestArea = 0;
     float area;
 
     [self cleanUp];
     cv::Mat imgCopy = cv::Mat::zeros( imgSrc.size(), CV_8UC3 );
-    [self findThresholdContours:imgSrc];
-    [self drawThresholdContours:imgCopy];
-    [self findCannyContours:imgCopy];
+    [self findThresholdContoursFromImage:imgSrc];
+    [self drawThresholdContoursOnImage:imgCopy];
+    [self findCannyContoursFromImage:imgCopy];
 
     for (int i = 0; i < _cannyContours.size(); i++) {
         // Approximate contour with accuracy proportional
@@ -50,13 +50,13 @@
     }
 }
 
--(void)findThresholdContours:(cv::Mat&)imgSrc {
+-(void)findThresholdContoursFromImage:(cv::Mat&)imgSrc {
     cv::Mat imageCopy;
     std::vector<cv::Vec4i> thresholdHierarchy;
 
-    /// Put the image in gray and blur it
-    [ImageProcesser BGR2GRAY:imgSrc :imageCopy];
-    [ImageProcesser blur:imageCopy :imageCopy];
+    /// Put the image in grayscale and blur it
+    [ImageProcesser BGR2GRAYImage:imgSrc outputImg:imageCopy];
+    [ImageProcesser blurImage:imageCopy outputImg:imageCopy];
 
     /// Threshold : detect edges
     threshold( imageCopy, _thresholdOutput, THRESHOLD_VALUE, THRESHOLD_MAX, THRESHOLD_TYPE);
@@ -67,7 +67,7 @@
 }
 
 // minArea = 2000 for example
--(void)findCannyContours:(cv::Mat&)imgSrc{
+-(void)findCannyContoursFromImage:(cv::Mat&)imgSrc{
     cv::Mat imageCopy;
 
     /// Canny : catch squares with gradient shading
@@ -88,14 +88,14 @@
 
 }
 
--(void)drawBiggestShape:(cv::Mat&)imgSrc{
+-(void)drawBiggestShapeOnImage:(cv::Mat&)imgSrc{
     if(_iBiggestShape > -1) {
         drawContours(imgSrc, _cannyContours, _iBiggestShape, green, 4, 8, std::vector<cv::Vec4i>(), 0, cv::Point());
         circle(imgSrc, _cannyMc[_iBiggestShape], 4, green, 3, 8, 0);
     }
 }
 
--(void)drawThresholdContours:(cv::Mat&)imgSrc {
+-(void)drawThresholdContoursOnImage:(cv::Mat&)imgSrc {
     /// For each contour, we find the convex hull object
     std::vector<std::vector<cv::Point>>thresholdHull( _thresholdContours.size() );
 
@@ -108,7 +108,7 @@
     }
 }
 
--(void)drawCannyContours:(cv::Mat&)imgSrc {
+-(void)drawCannyContoursOnImage:(cv::Mat&)imgSrc {
     for(int i = 0; i < _cannyContours.size(); i++ ) {
         drawContours( imgSrc, _cannyContours, i, yellow, 4, 8, std::vector<cv::Vec4i>(), 0, cv::Point() );
         circle( imgSrc, _cannyMc[i], 3, yellow, 3, 8, 0 );
